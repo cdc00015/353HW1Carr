@@ -1,0 +1,116 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  color: forestgreen
+}
+
+.image {
+    width: 200px;
+    height: 200px;
+}
+
+.horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.white-header {
+    color: forestgreen;
+    font-size: 96px;
+    text-align: center;
+    font-family: fantasy;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.searchBar {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    height: 40px;
+    font-size: 16px;
+}
+
+.flexing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexing2 {
+    display: flex;
+}
+
+.bodyText {
+    color: forestgreen;
+    font-size: 25px;
+    text-align: center;
+}
+
+h2 {
+    color: forestgreen;
+    font-size: 25px;
+}
+
+.image2 {
+    width: 340px;
+    height: 200px;
+}
+
+.player-header {
+    color: forestgreen;
+    font-size: 96px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    background-color: #f2f2f2;
+}
+
+.center {
+    text-align: center;
+}

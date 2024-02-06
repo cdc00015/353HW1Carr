@@ -1,0 +1,60 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+    <div class="horizontal">
+        <img class="image float-start" src="SunPic.png" alt="Picture of the Sun" />
+        <h1 class="white-header">Climate Sports</h1>
+        <img class="image float-end" src="Football Pick.png" alt="Picture of Football" />
+    </div>
+
+
+    <div class="flexing">
+        <form class="form">
+            <div class="player-bar">
+                <input type="text" placeholder="Enter Player or Team Name" class="searchBar">
+                <button type="submit" class="submit-btn">Search</button>
+            </div>
+            <div class="weather-info">
+                <select name="Precipitation">
+                    <option value=" - "> - </option>
+                    <option value="80+">80+</option>
+                    <option value="60-79">60-79</option>
+                    <option value="40-59">40-59</option>
+                    <option value="20-39">20-39</option>
+                    <option value="0-19">0-19</option>
+                    <option value="Below 0">Below 0</option>
+                </select>
+                <select name="Precipitation">
+                    <option value=" - "> - </option>
+                    <option value="Clear">Clear</option>
+                    <option value="Rain">Rain</option>
+                </select>
+            </div>
+        </form>
+    </div>
+
+    <b></b>
+
+    <p class="bodyText">
+        <h2 class="center">
+            Combining Climate and Sports to increase YOUR Knowledge of the game!
+        </h2>       
+    </p>
+
+    <div>
+        <h2>Player of the Month:</h2>
+        <a href="JL10">
+            <strong><em>Jordan Love</em></strong>
+        </a>
+    </div>
+
+
+
