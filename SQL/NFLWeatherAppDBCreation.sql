@@ -1,0 +1,128 @@
+CREATE DATABASE NFLWeatherAppDB
+GO
+USE [NFLWeatherAppDB]
+GO
+/****** Object:  Table [dbo].[Game]    Script Date: 2/26/2024 5:43:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Game](
+	[GameID] [int] NOT NULL,
+	[HomePoints] [int] NULL,
+	[AwayPoints] [int] NULL,
+	[HomeCompletions] [int] NULL,
+	[AwayCompletions] [int] NULL,
+	[HomeAttempts] [int] NULL,
+	[AwayAttempts] [int] NULL,
+	[HomeYards] [int] NULL,
+	[AwayYards] [int] NULL,
+	[HomeTD] [int] NULL,
+	[AwayTD] [int] NULL,
+	[HomeINT] [int] NULL,
+	[AwayINT] [int] NULL,
+ CONSTRAINT [PK_Game] PRIMARY KEY CLUSTERED 
+(
+	[GameID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[GameTeam]    Script Date: 2/26/2024 5:43:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[GameTeam](
+	[GameID] [int] NOT NULL,
+	[TeamID] [int] NOT NULL,
+	[HoA] [varchar](1) NULL,
+ CONSTRAINT [PK_GameTeam] PRIMARY KEY CLUSTERED 
+(
+	[GameID] ASC,
+	[TeamID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Player]    Script Date: 2/26/2024 5:43:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Player](
+	[TeamID] [int] NULL,
+	[PlayerID] [int] NOT NULL,
+	[FirstName] [nvarchar](max) NOT NULL,
+	[LastName] [nvarchar](max) NULL,
+	[JerseyNum] [int] NULL,
+	[Height] [nvarchar](max) NOT NULL,
+	[Weight] [int] NOT NULL,
+	[College] [nvarchar](max) NULL,
+ CONSTRAINT [PK_Player] PRIMARY KEY CLUSTERED 
+(
+	[PlayerID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[PlayerFav]    Script Date: 2/26/2024 5:43:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[PlayerFav](
+	[PlayerID] [int] NOT NULL,
+	[UserID] [int] NOT NULL,
+ CONSTRAINT [PK_PlayerFav] PRIMARY KEY CLUSTERED 
+(
+	[PlayerID] ASC,
+	[UserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Team]    Script Date: 2/26/2024 5:43:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Team](
+	[TeamID] [int] NOT NULL,
+	[TeamName] [nvarchar](max) NOT NULL,
+	[City] [nvarchar](max) NULL,
+	[Location] [nvarchar](max) NULL,
+	[Division] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_Team] PRIMARY KEY CLUSTERED 
+(
+	[TeamID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TeamFav]    Script Date: 2/26/2024 5:43:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TeamFav](
+	[UserID] [int] NOT NULL,
+	[TeamID] [int] NOT NULL,
+ CONSTRAINT [PK_TeamFav] PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC,
+	[TeamID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[User]    Script Date: 2/26/2024 5:43:30 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[User](
+	[UserID] [int] NOT NULL,
+	[FirstName] [nvarchar](max) NOT NULL,
+	[LastName] [nvarchar](max) NULL,
+	[DoB] [date] NOT NULL,
+ CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED 
+(
+	[UserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
