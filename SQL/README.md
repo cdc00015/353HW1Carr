@@ -67,4 +67,17 @@ Upon being grouped together, we first shared our individual assignments with eac
 >SQL server Code: (sum(G.HomeYards + G.AwayYards)/SUM(G.HomeAttempts + G.AwayAttempts)) as 'Yards Per Attempt', (sum(G.HomeCompletions + G.AwayCompletions)/SUM(G.HomeAttempts + G.AwayAttempts)) as 'Completion Percentage', (sum(G.HomeTD + G.AwayTD)/sum(G.HomeINT + G.AwayINT)) as 'TD/INT Ratio'
 all of these values are int how can I show these results with 2 decimals and percent
 Gave me:
+
+>Prompt: With the current database layout and data, how would I make a standard procedure to calculate the average points by a team per game?
+>Output (with an adjustment to the original prompt to add a count and sum function):    SELECT 
+        CAST(SUM(CASE WHEN gt.HoA = 'H' THEN g.HomePoints ELSE g.AwayPoints END) AS DECIMAL) 
+        / 
+        COUNT(gt.GameID) AS AveragePointsPerGame
+    FROM 
+        GameTeam gt
+    INNER JOIN 
+        Game g ON gt.GameID = g.GameID
+    WHERE 
+        gt.TeamID = @TeamID;
+END
  
