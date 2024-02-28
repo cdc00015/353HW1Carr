@@ -3,7 +3,7 @@
 ---
 
 #### Overview
-Upon being grouped together, we first shared our individual assignments with each other and began to discuss similarities and differences. We quickly noticed that two of our three project ideas were extremely similar, so we decided to consolidate our ideas and make a web app that allows for ~~~ ? the searching of NFL player (or team) with weather condition to see how they (player or team) did in the selected weather conditions ? ~~~
+Upon being grouped together, we first shared our individual assignments with each other and began to discuss similarities and differences. We quickly noticed that two of our three project ideas were extremely similar, so we decided to consolidate our ideas and make a web app that will allow users to search by an NFL player, or team, along with a weather condition to see how they, the player or team, performed under those conditions.
 
 ---
 
@@ -35,5 +35,31 @@ Upon being grouped together, we first shared our individual assignments with eac
 ---
 
 ### ChatGPT Prompts 
+> Can you make some mock data please for this SQL Server table?
+>
+>```
+>CREATE TABLE [dbo].[Player](
+>	[TeamID] [int] NULL,
+>	[PlayerID] [int] NOT NULL,
+>	[FirstName] [nvarchar](max) NOT NULL,
+>	[LastName] [nvarchar](max) NULL,
+>	[JerseyNum] [int] NULL,
+>	[Height] [nvarchar](max) NOT NULL,
+>	[Weight] [int] NOT NULL,
+>	[College] [nvarchar](max) NULL,
+> CONSTRAINT [PK_Player] PRIMARY KEY CLUSTERED 
+>(
+>	[PlayerID] ASC
+>)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+>) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+>GO
+>
+>ALTER TABLE [dbo].[Player]  WITH CHECK ADD  CONSTRAINT [FK_Player_Team] FOREIGN KEY([TeamID])
+>REFERENCES [dbo].[Team] ([TeamID])
+>GO
+>
+>ALTER TABLE [dbo].[Player] CHECK CONSTRAINT [FK_Player_Team]
+>GO
+>```
 
----
+> In SQL server, I'm having trouble coming up with some possible stored procedures for my web app that will allow users to search for an NFL player or team, and a weather condition and see their stats / how they performed, what are some example stored procedures?
