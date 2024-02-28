@@ -23,7 +23,7 @@ Upon being grouped together, we first shared our individual assignments with eac
 5. spAddFavorite (Jake)
 - Adds a player or team the user selects to their favorites list
 6. spShowFavorite (Jake) 
-- Display / return players the user has selected / added to their favorites list
+- Returns the players and/or teams the user has selected / added to their favorites list
 
 ---
 
