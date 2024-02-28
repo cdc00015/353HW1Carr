@@ -63,3 +63,8 @@ Upon being grouped together, we first shared our individual assignments with eac
 >```
 
 > In SQL server, I'm having trouble coming up with some possible stored procedures for my web app that will allow users to search for an NFL player or team, and a weather condition and see their stats / how they performed, what are some example stored procedures?
+
+>SQL server Code: (sum(G.HomeYards + G.AwayYards)/SUM(G.HomeAttempts + G.AwayAttempts)) as 'Yards Per Attempt', (sum(G.HomeCompletions + G.AwayCompletions)/SUM(G.HomeAttempts + G.AwayAttempts)) as 'Completion Percentage', (sum(G.HomeTD + G.AwayTD)/sum(G.HomeINT + G.AwayINT)) as 'TD/INT Ratio'
+all of these values are int how can I show these results with 2 decimals and percent
+Gave me:
+ 
