@@ -1,0 +1,6 @@
+@NFLWeatherAppAPI_HostAddress = http://localhost:5066
+
+GET {{NFLWeatherAppAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
