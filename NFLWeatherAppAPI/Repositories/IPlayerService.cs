@@ -1,4 +1,5 @@
-﻿using NFLWeatherAppAPI.Entities;
+﻿using System.Threading.Tasks;
+using NFLWeatherAppAPI.Entities;
 
 namespace NFLWeatherAppAPI.Repositories
 {

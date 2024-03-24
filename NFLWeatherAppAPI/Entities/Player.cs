@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace NFLWeatherAppAPI.Entities
 {
@@ -17,7 +19,6 @@ namespace NFLWeatherAppAPI.Entities
         public int Weight { get; set; }
         [Required]
         public int TeamID { get; set; }
-        
-        public string College { get; set; }
+        public string? College { get; set; } // nullable string
     }
 }

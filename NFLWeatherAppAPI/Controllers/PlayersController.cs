@@ -25,5 +25,13 @@ namespace NFLWeatherAppAPI.Controllers
             return playerDetails;
         }
 
+        /* This would allow users to add players but not sure if we want / need to do this
+        [HttpPost]
+        public async Task<ActionResult<int>> AddPlayer(Player player)
+        {
+            var playerDetails = await playerService.AddPlayer(player);
+            return playerDetails;
+        }
+        */
     }
 }
