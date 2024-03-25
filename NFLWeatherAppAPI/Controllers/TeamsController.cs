@@ -15,10 +15,21 @@ namespace NFLWeatherAppAPI.Controllers
         {
             this.TeamService = TeamService;
         }
-        [HttpGet("{teamid}")]
+        [HttpGet("basic/{teamid}")]
         public async Task<List<Team>> TeamGetBasicStats(int teamid)
         {
             var teamDetails = await TeamService.TeamGetBasicStats(teamid);
+            if (teamDetails == null)
+            {
+                // return NotFound();
+            }
+            return teamDetails;
+        }
+
+        [HttpGet("advanced/{teamid}")]
+        public async Task<List<Team>> TeamGetAdvancedStats(int teamid)
+        {
+            var teamDetails = await TeamService.TeamGetAdvancedStats(teamid);
             if (teamDetails == null)
             {
                 // return NotFound();
