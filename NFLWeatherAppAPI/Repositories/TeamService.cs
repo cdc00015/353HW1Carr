@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace NFLWeatherAppAPI.Repositories
 {
-    public class TeamService // : ITeamService
+    public class TeamService : ITeamService
     {
         // connecting to the database 
         private readonly DbContextClass _dbContextClass;
@@ -17,11 +17,22 @@ namespace NFLWeatherAppAPI.Repositories
             _dbContextClass = dbContextClass;
         }
 
-        /*
-        public Task<List<Player>> TeamGetBasicStats(int teamid)
+        
+        public async Task<List<Team>> TeamGetBasicStats(int teamid)
         {
-
+            var param = new SqlParameter("@TeamID", teamid);
+            //converts response from db into json, keeps us safe from crosssite scripting
+            var teamDetails = await Task.Run(() => _dbContextClass.Team.FromSqlRaw("exec spTeamGetBasicStats @TeamID", param).ToListAsync());
+            return teamDetails;
         }
-       */
+
+        public async Task<List<Team>> TeamGetAdvancedStats(int teamid)
+        {
+            var param = new SqlParameter("@TeamID", teamid);
+            //converts response from db into json, keeps us safe from crosssite scripting
+            var team1Details = await Task.Run(() => _dbContextClass.Team.FromSqlRaw("exec spTeamGetAdvancedStats @TeamID", param).ToListAsync());
+            return team1Details;
+        }
+
     }
 }
