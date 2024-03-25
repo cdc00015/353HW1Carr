@@ -5,7 +5,7 @@ namespace NFLWeatherAppAPI.Repositories
 {
     public interface ITeamService
     {
-        public Task<List<Player>> TeamGetBasicStats(int teamid);
+        public Task<List<Team>> TeamGetBasicStats(int teamid);
 
     }
 }
