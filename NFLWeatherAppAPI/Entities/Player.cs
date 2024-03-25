@@ -21,5 +21,11 @@ namespace NFLWeatherAppAPI.Entities
         [Required]
         public int TeamID { get; set; }
         public string? College { get; set; } // nullable string
+        public int Yards { get; set; }
+        public int Completions { get; set; }
+        public int Attempts { get; set; }
+        public int TDs { get; set; }
+        public int INTs { get; set; }
+
     }
 }
