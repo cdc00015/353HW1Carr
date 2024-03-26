@@ -30,8 +30,8 @@ namespace NFLWeatherAppAPI.Repositories
         {
             var param = new SqlParameter("@TeamID", teamid);
             //converts response from db into json, keeps us safe from crosssite scripting
-            var team1Details = await Task.Run(() => _dbContextClass.Team.FromSqlRaw("exec spTeamGetAdvancedStats @TeamID", param).ToListAsync());
-            return team1Details;
+            var teamAdvancedDetails = await Task.Run(() => _dbContextClass.TeamAdvancedStats.FromSqlRaw("exec spTeamGetAdvancedStats @TeamID", param).ToListAsync());
+            return teamAdvancedDetails;
         }
 
     }
