@@ -47,21 +47,23 @@ Our final page will be the terms and conditions page. This will provide the user
 - **Outputs:** The API will output basic information about the team the user chose.  Some of the information included is a team's location, division they play in, and the city where the team is located.
 
 ### 4. TeamGetAdvanceStats (Carson Mealey)
-- **Purpose:** 
-- **Inputs:**
-- **Outputs:**
+- **Purpose:** This API will retrieve the advanced stats of a team that requires calculations.
+- **Inputs:** The user will input the name of a team which will provide the API with a TeamID to use for the input of the API
+- **Outputs:** The API will output the advance stat calculations from the spTeamGetAdvanceStats using the Game and Team table.
 
 ### 5. ShowFavoritePlayer (Jacob Williamson)
-- **Purpose:** 
-- **Inputs:**
-- **Outputs:**
+- **Purpose:** This API will list to the user their list of favorite players in the favorites page
+- **Inputs:** Since a certain user will be trying to access their favorites, the UserID will be the input into the API
+- **Outputs:** The output will be from the PlayerFav tables. It will just reveal to the user the teams stored as favorites.
 
 ### 6. ShowFavoriteTeam (Jacob Williamson)
-- **Purpose:** 
-- **Inputs:**
-- **Outputs:**
+- **Purpose:** This API will list to the user their list of favorite teams in the favorites page
+- **Inputs:** Since a certain user will be trying to access their favorites, the UserID will be the input into the API
+- **Outputs:** The output will be from the TeamFav tables. It will just reveal to the user the teams stored as favorites.
 
 ## ChatGPT Prompts
 Gave ChatGPT my code in my AdvanceStats class and told it I had a CS1519 error and asked what was wrong. It told me I had an extra '[Required]' at the end of my code.
 
 Gave ChatGPT my code for the PlayerService Repo and told it I had a CS0029 error and asked what was wrong. It told me I connected the Player class instead of AdvanceStats for my PlayerGetAdvanceStats API.
+
+Gave ChatGPT my code for the TeamsController and told it I was getting a fetch error response 500 and it told me to alter my "HTTP Get" code and that helped fix the issue.
