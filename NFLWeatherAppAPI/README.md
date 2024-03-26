@@ -37,9 +37,9 @@ Our final page will be the terms and conditions page. This will provide the user
 - **Outputs:** The API will output the advance stat calculations from the spPlayerGetAdvanceStats using the Game and Player table.
 
 ### 3. TeamGetBasicStats
-- **Purpose:** 
-- **Inputs:**
-- **Outputs:**
+- **Purpose:** This API will retrieve the basic stats for a specific team that the user chooses.
+- **Inputs:** The user will input a team's name which will provide the API a TeamID to use as the input.
+- **Outputs:** The API will output basic information about the team the user chose.  Some of the information included is a team's location, division they play in, and the city where the team is located.
 
 ### 4. TeamGetAdvanceStats
 - **Purpose:** 
