@@ -65,3 +65,5 @@ Our final page will be the terms and conditions page. This will provide the user
 Gave ChatGPT my code in my AdvanceStats class and told it I had a CS1519 error and asked what was wrong. It told me I had an extra '[Required]' at the end of my code.
 
 Gave ChatGPT my code for the PlayerService Repo and told it I had a CS0029 error and asked what was wrong. It told me I connected the Player class instead of AdvanceStats for my PlayerGetAdvanceStats API.
+
+Gave ChatGPT my code for the TeamsController and told it I was getting a fetch error response 500 and it told me to alter my "HTTP Get" code and that helped fix the issue.
