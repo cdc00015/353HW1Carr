@@ -18,8 +18,8 @@ Our third page is going to be the team page. This page will allow the user to lo
 ### 4. Favorite Page
 The fourth page will be our user’s favorite page. This page will show the list of the user's favorite players and teams. We will use the ShowFavorite API to display the list of favorites for the user. The page will also allow the user to add players and teams to the list of their favorites. To accomplish this, we will use the AddFavorite API.
 
-### 5. (Insert 5th Page)
-The fifth page we plan on using is…
+### 5. Login Page
+The fifth page we will make a login page. This will allow the user to sign in. This will allow the website to know the UserID of the user using our website. This will allow them to look at their list of favorite players
 
 ### 6. Terms and Conditions Page
 Our final page will be the terms and conditions page. This will provide the user with the terms and conditions of our website. The page will have a link to go back to the main page.
