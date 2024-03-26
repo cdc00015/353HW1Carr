@@ -6,6 +6,6 @@ namespace NFLWeatherAppAPI.Repositories
     public interface IPlayerService
     {
         public Task<List<Player>> PlayerGetBasicStats(int playerid);
-        public Task<List<Player>> PlayerGetAdvanceStats(int playerid);
+        public Task<List<AdvanceStats>> PlayerGetAdvanceStats(int playerid);
     }
 }

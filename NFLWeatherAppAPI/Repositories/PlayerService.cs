@@ -24,12 +24,12 @@ namespace NFLWeatherAppAPI.Repositories
             var playerDetails = await Task.Run(() => _dbContextClass.Player.FromSqlRaw("exec spPlayerGetBasicStats @playerid", param ).ToListAsync());
             return playerDetails;
         }
-        public async Task<List<Player>> PlayerGetAdvanceStats(int playerid)
+        public async Task<List<AdvanceStats>> PlayerGetAdvanceStats(int playerid)
         {
             var param = new SqlParameter("@PlayerID", playerid);
             //converts response from db into json, keeps us safe from crosssite scripting
-            var playerDetails = await Task.Run(() => _dbContextClass.Player.FromSqlRaw("exec spPlayerGetAdvanceStats @playerid", param).ToListAsync());
-            return playerDetails;
+            var playerAdvanceDetails = await Task.Run(() => _dbContextClass.AdvanceStats.FromSqlRaw("exec spPlayerGetAdvanceStats @playerid", param).ToListAsync());
+            return playerAdvanceDetails;
         }
 
     }

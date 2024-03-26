@@ -9,7 +9,8 @@ namespace NFLWeatherAppAPI.Data
         {}
         public DbSet<Player> Player { get; set; }
         public DbSet<Team> Team { get; set; }
-        public DbSet<Game> Game { get; set; }  
+        public DbSet<Game> Game { get; set; } 
+        public DbSet<AdvanceStats> AdvanceStats { get; set; }
 
     }
 }

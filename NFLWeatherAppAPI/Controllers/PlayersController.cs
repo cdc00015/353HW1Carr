@@ -14,7 +14,7 @@ namespace NFLWeatherAppAPI.Controllers
         {
             this.playerService = playerService;
         }
-        [HttpGet("{playerid}")]
+        [HttpGet("Basic/{playerid}")]
         public async Task<List<Player>> PlayerGetBasicStats(int playerid)
         {
             var playerDetails = await playerService.PlayerGetBasicStats(playerid);
@@ -23,6 +23,17 @@ namespace NFLWeatherAppAPI.Controllers
                // return NotFound();
             }
             return playerDetails;
+        }
+
+        [HttpGet("Advanced/{playerid}")]
+        public async Task<List<AdvanceStats>> PlayerGetAdvanceStats(int playerid)
+        {
+            var playerAdvanceDetails = await playerService.PlayerGetAdvanceStats(playerid);
+            if (playerAdvanceDetails == null)
+            {
+                // return NotFound();
+            }
+            return playerAdvanceDetails;
         }
 
         /* This would allow users to add players but not sure if we want / need to do this
