@@ -29,12 +29,12 @@ namespace NFLWeatherAppAPI.Controllers
         [HttpGet("advanced/{teamid}")]
         public async Task<List<Team>> TeamGetAdvancedStats(int teamid)
         {
-            var teamDetails = await TeamService.TeamGetAdvancedStats(teamid);
-            if (teamDetails == null)
+            var teamAdvancedDetails = await TeamService.TeamGetAdvancedStats(teamid);
+            if (teamAdvancedDetails == null)
             {
-                // return NotFound();
+                //return NotFound();
             }
-            return teamDetails;
+            return teamAdvancedDetails;
         }
     }
 }
