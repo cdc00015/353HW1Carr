@@ -17,5 +17,7 @@ namespace NFLWeatherAppAPI.Entities
 
         [Required]
         public DateTime DoB { get; set; }
+
+
     }
 }
