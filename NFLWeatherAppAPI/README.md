@@ -1,8 +1,8 @@
 # Homework 4 – Due March 26
 
 ## Database Updates
-- Altered spPlayerGetBasicStats
-- Altered spPlayerGetAdvanceStats
+- Altered spPlayerGetBasicStats (updated version in CristoferCarrSps)
+- Altered spPlayerGetAdvanceStats (updated version in CristoferCarrSps)
 
 ## Page Information and Functionality
 
