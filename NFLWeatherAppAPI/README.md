@@ -31,32 +31,32 @@ Our final page will be the terms and conditions page. This will provide the user
 
 ## API Information
 
-### 1. PlayerGetBasicStats
+### 1. PlayerGetBasicStats (Cris Carr)
 - **Purpose:** This API will retrieve the basic information of a certain player that the user wants to know about and put it in a table on our website.
 - **Inputs:** The user will input a Player’s name which will provide the API a PlayerID to use as the input for the API.
 - **Outputs:** The API will output the basic information of a player from the Player table and the stats for the player from the Game table
 
-### 2. PlayerGetAdvanceStats
+### 2. PlayerGetAdvanceStats (Cris Carr)
 - **Purpose:** This API will retrieve the advanced stats for a player that involves calculations
 - **Inputs:** The user will input a player’s name which will provide the API a PlayerID to use as the input for the API.
 - **Outputs:** The API will output the advance stat calculations from the spPlayerGetAdvanceStats using the Game and Player table.
 
-### 3. TeamGetBasicStats
+### 3. TeamGetBasicStats (Carson Mealey)
 - **Purpose:** This API will retrieve the basic stats for a specific team that the user chooses.
 - **Inputs:** The user will input a team's name which will provide the API a TeamID to use as the input.
 - **Outputs:** The API will output basic information about the team the user chose.  Some of the information included is a team's location, division they play in, and the city where the team is located.
 
-### 4. TeamGetAdvanceStats
+### 4. TeamGetAdvanceStats (Carson Mealey)
 - **Purpose:** 
 - **Inputs:**
 - **Outputs:**
 
-### 5. ShowFavoritePlayer
+### 5. ShowFavoritePlayer (Jacob Williamson)
 - **Purpose:** 
 - **Inputs:**
 - **Outputs:**
 
-### 6. ShowFavoriteTeam
+### 6. ShowFavoriteTeam (Jacob Williamson)
 - **Purpose:** 
 - **Inputs:**
 - **Outputs:**
