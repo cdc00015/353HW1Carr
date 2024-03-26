@@ -3,6 +3,11 @@
 ## Database Updates
 - Altered spPlayerGetBasicStats (updated version in CristoferCarrSps)
 - Altered spPlayerGetAdvanceStats (updated version in CristoferCarrSps)
+- Altered spTeamGetBasicStats (updated version in CarsonMealeySPs)
+- Altered spTeamGetAdvanceStats (updated version in CarsonMealeySPs)
+- Created spShowFavoritePlayer (updated version in JacobWilliamsonSPs)
+- Created spShowFavoriteTeam (updated version in JacobWilliamsonSPs)
+- Added data to PlayerFav and TeamFav tables
 
 ## Page Information and Functionality
 
