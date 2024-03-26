@@ -1,5 +1,9 @@
 # Homework 4 – Due March 26
 
+## Database Updates
+- Altered spPlayerGetBasicStats
+- Altered spPlayerGetAdvanceStats
+
 ## Page Information and Functionality
 
 ### 1. Main Page
@@ -55,7 +59,7 @@ Our final page will be the terms and conditions page. This will provide the user
 ## ChatGPT Prompts
 Gave ChatGPT my code in my AdvanceStats class and told it I had a CS1519 error and asked what was wrong. It told me I had an extra '[Required]' at the end of my code.
 
-Gave ChatGPT my code for the PlayerService Repo and told it I had a CS0029 error and asked what was wrong. It told me I connected the Player class instead of AdvanceStats for my PlayerGetAdvanceStats API. 
+Gave ChatGPT my code for the PlayerService Repo and told it I had a CS0029 error and asked what was wrong. It told me I connected the Player class instead of AdvanceStats for my PlayerGetAdvanceStats API.
 
 ### Group Assignment
 Design a web application with your group. Outline the user experience in words, detailing the features and functionality. Your application must include:
