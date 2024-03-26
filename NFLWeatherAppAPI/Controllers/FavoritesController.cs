@@ -15,7 +15,7 @@ namespace NFLWeatherAppAPI.Controllers
         {
             this.favoriteService = FavoriteService;
         }
-        [HttpGet("Basic/{userid}")]
+        [HttpGet("team/{userid}")]
         public async Task<List<TeamFav>> ShowFavoriteTeam(int userid)
         {
             var favTeam = await favoriteService.ShowFavoriteTeam(userid);
@@ -26,7 +26,7 @@ namespace NFLWeatherAppAPI.Controllers
             return favTeam;
         }
 
-        [HttpGet("Advanced/{userid}")]
+        [HttpGet("player/{userid}")]
         public async Task<List<PlayerFav>> ShowFavoritePlayer(int userid)
         {
             var favPlayer = await favoriteService.ShowFavoritePlayer(userid);
