@@ -1,3 +1,6 @@
+USE [NFLWeatherAppDB]
+GO
+    
 CREATE OR ALTER PROCEDURE [dbo].[spShowFavoritePlayer]
     @UserID int
 AS
