@@ -1,3 +1,5 @@
+USE [NFLWeatherAppDB]
+GO
 -- Inserting mock data into TeamFav table with varying number of favorite teams per user
 INSERT INTO TeamFav (TeamID, UserID)
 VALUES
