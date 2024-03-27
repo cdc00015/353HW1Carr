@@ -1,3 +1,5 @@
+USE [NFLWeatherAppDB]
+GO
 INSERT INTO [dbo].[PlayerFav] ([UserID], [PlayerID]) VALUES 
 (1, 1), (1, 3),
 (2, 2), (2, 4), (2, 5),
