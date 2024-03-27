@@ -10,5 +10,7 @@ namespace NFLWeatherAppAPI.Entities
         public int TeamID { get; set; }
         [Key]
         public int UserID { get; set; }
+        //maybe include 'DateTime' here to record when a player was added to favorites list 
+
     }
 }

@@ -2,7 +2,7 @@
 using NFLWeatherAppAPI.Entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-
+//Jake Williamson
 namespace NFLWeatherAppAPI.Repositories
 {
     public class FavoriteService : IFavoriteService
@@ -16,7 +16,7 @@ namespace NFLWeatherAppAPI.Repositories
             //setting private equal to dbContextClass
             _dbContextClass = dbContextClass;
         }
-
+        
         public async Task<List<PlayerFav>> ShowFavoritePlayer(int userid)
         {
             var param = new SqlParameter("@UserID", userid);
