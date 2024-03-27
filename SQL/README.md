@@ -20,10 +20,15 @@ Upon being grouped together, we first shared our individual assignments with eac
 4. spPlayerGetAdvancedStats (Cris)
 - Get the advanced stats for a player by using playerID. Used to generate data for a player’s stat page
   - Uses basic stats and does calculations on them, yards per run, touchdowns per game, etc…
-5. spAddFavorite (Jake)
-- Adds a player or team the user selects to their favorites list
-6. spShowFavorite (Jake) 
-- Returns the players and/or teams the user has selected / added to their favorites list
+5. spShowFavoritePlayer (Jake)
+- Returns the user with a list of their favorite players, takes userid as an input
+6. spShowFavoriteTeam (Jake)
+- Returns the user with a list of their favorite teams, takes userid as an input
+
+##### Planned SPs 
+1. spAddFavorite
+- Allows the user to add a player or team to their favorites list
+
 
 ---
 
