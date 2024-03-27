@@ -1,3 +1,6 @@
+USE [NFLWeatherAppDB]
+GO
+  
 INSERT [dbo].[Game] ([GameID], [HomePoints], [AwayPoints], [HomeCompletions], [AwayCompletions], [HomeAttempts], [AwayAttempts], [HomeYards], [AwayYards], [HomeTD], [AwayTD], [HomeINT], [AwayINT]) VALUES (4, 24, 28, 20, 25, 35, 30, 280, 320, 2, 3, 2, 1)
 GO
 INSERT [dbo].[Game] ([GameID], [HomePoints], [AwayPoints], [HomeCompletions], [AwayCompletions], [HomeAttempts], [AwayAttempts], [HomeYards], [AwayYards], [HomeTD], [AwayTD], [HomeINT], [AwayINT]) VALUES (5, 17, 14, 15, 12, 30, 28, 210, 200, 1, 2, 1, 1)
