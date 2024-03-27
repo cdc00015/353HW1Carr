@@ -9,6 +9,9 @@
 - Created spShowFavoriteTeam (updated version in JacobWilliamsonSPs)
 - Added data to PlayerFav and TeamFav tables
 
+### Note
+* In order to use these api's, you will first need to execute our [updated stored procedures](/SQL) and the two new mock data files for [TeamFav](/SQL/TeamFavData.sql) and [PlayerFav](/SQL/PlayerFavData.sql).
+
 ## Page Information and Functionality
 
 ### 1. Main Page
