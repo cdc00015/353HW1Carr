@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[spShowFavoritePlayer]
+CREATE OR ALTER PROCEDURE [dbo].[spShowFavoritePlayer]
     @UserID int
 AS
 BEGIN
@@ -13,7 +13,7 @@ EXEC spShowFavoritePlayer 1
 GO
 */
 
-CREATE PROCEDURE [dbo].[spShowFavoriteTeam]
+CREATE OR ALTER PROCEDURE [dbo].[spShowFavoriteTeam]
     @UserID int
 AS
 BEGIN
