@@ -57,12 +57,12 @@ Our final page will be the terms and conditions page. This will provide the user
 ### 5. ShowFavoritePlayer (Jacob Williamson)
 - **Purpose:** This API will return to the user their list of favorite players in the favorites page
 - **Inputs:** Since a certain user will be trying to access their favorites, the UserID will be the input into the API
-- **Outputs:** The output will be from the PlayerFav tables. It will display to the user the teams stored as favorites.
+- **Outputs:** The output will be from the PlayerFav tables. It will display to the user the players stored as their favorites.
 
 ### 6. ShowFavoriteTeam (Jacob Williamson)
 - **Purpose:** This API will return to the user their list of favorite teams in the favorites page
 - **Inputs:** Since a certain user will be trying to access their favorites, the UserID will be the input into the API
-- **Outputs:** The output will be from the TeamFav tables. It will just display to the user the teams stored as favorites.
+- **Outputs:** The output will be from the TeamFav tables. It will display to the user the teams stored as their favorites.
 
 ## ChatGPT Prompts
 Gave ChatGPT my code in my AdvanceStats class and told it I had a CS1519 error and asked what was wrong. It told me I had an extra '[Required]' at the end of my code.
