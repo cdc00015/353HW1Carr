@@ -22,6 +22,6 @@ async function displayPlayerDetails(PlayerID) {
     const data = await response.json();
 
     //Changing the HTML and making it visable
-    document.getElementById('playerName').innerHTML = data[0].firstName;
+    document.getElementById('playerName').innerHTML = data[0].firstName + " " + data[0].lastName;
     document.getElementById('playerName').style.visibility = 'visible';
 }
