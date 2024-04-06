@@ -11,4 +11,5 @@
         table.style.display = 'none';
   }
 }
+
 </script>
