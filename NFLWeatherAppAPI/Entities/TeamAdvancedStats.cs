@@ -17,10 +17,9 @@ namespace NFLWeatherAppAPI.Entities
 
         public string Division { get; set; }
 
-        public int PointsPerGame { get; set; }
-        [Required]
+        public double PointsPerGame { get; set; }
 
-        public int YardsPerGame { get; set; }
+        public double YardsPerGame { get; set; }
         
     }
 }

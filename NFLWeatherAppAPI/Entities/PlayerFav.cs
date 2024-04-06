@@ -6,8 +6,9 @@ namespace NFLWeatherAppAPI.Entities
 {
     public class PlayerFav
     {
-        [Key]
+        
         public int PlayerID { get; set; }
+        [Key]
         public int UserID { get; set; }
 
         //maybe include 'DateTime' here to record when a player was added to favorites list 

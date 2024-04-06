@@ -1,3 +1,6 @@
+USE [NFLWeatherAppDB]
+GO
+    
 create or alter proc spTeamGetBasicStats
 @TeamID int
 AS
