@@ -21,16 +21,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowMyRazorPagesApp",
+    options.AddPolicy("AllowMyRazorPagesApp2",
         builder =>
         {
             builder.WithOrigins("https://localhost:7276/")
             .AllowAnyHeader()
             .AllowAnyMethod();
         }
-        
-        )
-})
+
+        );
+});
 
 //builder.Services.AddRazorPages();
 
@@ -58,6 +58,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseCors("AllowMyRazorPagesApp");
+
+app.UseCors("AllowMyRazorPagesApp2")
 
 app.UseAuthorization();
 
