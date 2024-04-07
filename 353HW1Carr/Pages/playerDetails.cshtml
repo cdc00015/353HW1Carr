@@ -41,4 +41,53 @@
     </tbody>
 </table>
 
+<button type="button" onclick="var elem = document.getElementById('jlStats'); if (elem.style.display === 'block') {elem.style.display = 'none';} else {elem.style.display = 'block';}">More Stats!</button>
+<table id="jlStats" style="display: none; width: 100%;">
+    <thread>
+        <tr>
+            <td><strong>Team</strong></td>
+            <td><strong>Year</strong></td>
+            <td><strong>Att</strong></td>
+            <td><strong>Comp</strong></td>
+            <td><strong>Pct</strong></td>
+            <td><strong>YPA</strong></td>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <td>GB</td>
+            <td>2023</td>
+            <td>579</td>
+            <td>372</td>
+            <td>64.2</td>
+            <td>7.2</td>
+        </tr>
+        <tr>
+            <td>GB</td>
+            <td>2022</td>
+            <td>21</td>
+            <td>14</td>
+            <td>66.7</td>
+            <td>9.3</td>
+        </tr>
+        <tr>
+            <td>GB</td>
+            <td>2021</td>
+            <td>62</td>
+            <td>36</td>
+            <td>58.1</td>
+            <td>6.6</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<div>
+    <h2>Try Another Player?</h2>
+    <a href="index">
+        <strong><em>Back to Search</em></strong>
+    </a>
+</div>
+
 <script type="module">displayHotelDetails(@playerID)</script>
