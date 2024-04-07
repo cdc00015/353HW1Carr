@@ -18,9 +18,12 @@ This is for show the visability of JLove stats
 */
 
 async function displayPlayerDetails(PlayerID) {
-    const response = await fetch(`https://localhost:7095/api/Players/Basic/${PlayerID}`)
+    const response = await fetch(`https://localhost:7095/api/Players/Basic/${playerID}`)
     const data = await response.json();
 
-    document.getElementById('PlayerName').innerHTML = data[0].FirstName;
-    document.getElementById('PlayerName').style.visibility = 'visible';
+    document.getElementById('playerName').innerHTML = data[0].firstName;
+    document.getElementById('playerName').style.visibility = 'visible';
+
+    document.getElementById('college').innerHTML = data[0].college;
+    document.getElementById('college').style.visibility = 'visible';
 }
