@@ -32,4 +32,17 @@ async function displayPlayerDetails(PlayerID) {
 
     document.getElementById('weight').innerHTML = data[0].weight;
     document.getElementById('weight').style.visibility = 'visible'
+
+    document.getElementById('yards').innerHTML = data[0].yards;
+    document.getElementById('yards').style.visibility = 'visible'
+
+    document.getElementById('tDs').innerHTML = data[0].tDs;
+    document.getElementById('tDs').style.visibility = 'visible'
+
+    document.getElementById('inTs').innerHTML = data[0].inTs;
+    document.getElementById('inTs').style.visibility = 'visible'
+
+    document.getElementById('completions').innerHTML = data[0].completions;
+    document.getElementById('completions').style.visibility = 'visible'
+
 }
