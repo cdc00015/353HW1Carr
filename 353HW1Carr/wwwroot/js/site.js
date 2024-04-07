@@ -26,4 +26,10 @@ async function displayPlayerDetails(PlayerID) {
 
     document.getElementById('college').innerHTML = data[0].college;
     document.getElementById('college').style.visibility = 'visible';
+
+    document.getElementById('height').innerHTML = data[0].height;
+    document.getElementById('height').style.visibility = 'visible'
+
+    document.getElementById('weight').innerHTML = data[0].weight;
+    document.getElementById('weight').style.visibility = 'visible'
 }
