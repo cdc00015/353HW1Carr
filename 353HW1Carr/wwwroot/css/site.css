@@ -131,4 +131,11 @@ th, td {
     width: 400px;
 }
 
+.indexWords {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+
        
