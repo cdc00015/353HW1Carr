@@ -58,9 +58,9 @@
     </tbody>
 </table>
 
-<button type="button" onclick="document.getElementById('jlStats').style.display='block'">More Stats!</button>
+<button type="button" onclick="var elem = document.getElementById('jlStats'); if (elem.style.display === 'block') {elem.style.display = 'none';} else {elem.style.display = 'block';}">More Stats!</button>
 <table id="jlStats" style="display: none; width: 100%;">
-    <thread>
+    <thead>
         <tr>
             <td><strong>Team</strong></td>
             <td><strong>Year</strong></td>
@@ -69,7 +69,7 @@
             <td><strong>Pct</strong></td>
             <td><strong>YPA</strong></td>
         </tr>
-    </thread>
+    </thead>
     <tbody>
         <tr>
             <td>GB</td>

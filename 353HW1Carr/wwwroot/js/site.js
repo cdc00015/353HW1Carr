@@ -17,8 +17,8 @@ This is for show the visability of JLove stats
 </script>
 */
 
-async function displayPlayerDetails(PlayerID) {
-    const response = await fetch(`https://localhost:7095/api/Players/Basic/${playerID}`)
+async function displayPlayerDetails(playerid) {
+    const response = await fetch(`https://localhost:7095/api/Players/Basic/${playerid}`)
     const data = await response.json();
 
     document.getElementById('playerName').innerHTML = data[0].firstName;
@@ -45,4 +45,18 @@ async function displayPlayerDetails(PlayerID) {
     document.getElementById('completions').innerHTML = data[0].completions;
     document.getElementById('completions').style.visibility = 'visible'
 
+}
+
+async function displayAdvancePlayerDetails(playerid) {
+    const response = await fetch(`https://localhost:7095/api/Players/Advanced/${playerid}`)
+    const data = await response.json();
+
+    document.getElementById('yardsPerAttempt').innerHTML = data[0].yardsPerAttempt;
+    document.getElementById('yardsPerAttempt').style.visibility = 'visible'
+
+    document.getElementById('completionPercentage').innerHTML = data[0].completionPercentage;
+    document.getElementById('completionPercentage').style.visibility = 'visible'
+
+    document.getElementById('tdintRatio').innerHTML = data[0].tdintRatio;
+    document.getElementById('tdintRatio').style.visibility = 'visible'
 }
