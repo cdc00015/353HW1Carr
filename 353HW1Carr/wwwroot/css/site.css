@@ -120,5 +120,9 @@ th, td {
     font-size: 150px;
 }
 
+.searchPlayer select {
+    height: 40px;
+    width: 400px;
+}
 
        
