@@ -63,6 +63,7 @@ body {
 
 .submit-btn {
     height: 40px;
+    width: 125px;
     font-size: 16px;
 }
 
@@ -121,6 +122,11 @@ th, td {
 }
 
 .searchPlayer select {
+    height: 40px;
+    width: 400px;
+}
+
+.searchTeam select {
     height: 40px;
     width: 400px;
 }
