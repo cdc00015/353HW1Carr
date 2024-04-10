@@ -33,7 +33,7 @@ builder.Services.AddCors(options =>
         );
 });
 
-//builder.Services.AddRazorPages();
+builder.Services.AddRazorPages();
 
 builder.Services.AddCors(option =>
 {

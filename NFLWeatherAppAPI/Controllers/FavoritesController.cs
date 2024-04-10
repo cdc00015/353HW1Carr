@@ -18,23 +18,23 @@ namespace NFLWeatherAppAPI.Controllers
         [HttpGet("team/{userid}")]
         public async Task<List<TeamFav>> ShowFavoriteTeam(int userid)
         {
-            var favTeam = await favoriteService.ShowFavoriteTeam(userid);
-            if (favTeam == null)
+            var favTeamDetails = await favoriteService.ShowFavoriteTeam(userid);
+            if (favTeamDetails == null)
             {
                 // return NotFound();
             }
-            return favTeam;
+            return favTeamDetails;
         }
 
         [HttpGet("player/{userid}")]
         public async Task<List<PlayerFav>> ShowFavoritePlayer(int userid)
         {
-            var favPlayer = await favoriteService.ShowFavoritePlayer(userid);
-            if (favPlayer == null)
+            var favPlayerDetails = await favoriteService.ShowFavoritePlayer(userid);
+            if (favPlayerDetails == null)
             {
                 // return NotFound();
             }
-            return favPlayer;
+            return favPlayerDetails;
         }
     }
 }
