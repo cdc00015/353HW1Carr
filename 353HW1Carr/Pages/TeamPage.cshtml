@@ -1,7 +1,7 @@
 ﻿@page
 @model _353HW1Carr.Pages.TeamPageModel
 @{
-    var teamid = HttpContext.Request.Query["playerid"];
+    var teamid = HttpContext.Request.Query["teamid"];
 }
 <div class="flexing2">
     <img class="image float-end" src="Football Pick.png" alt="Picture of Football" />
@@ -10,8 +10,8 @@
         <div class="flexing2">
             <h2 id="college" style="visibility: hidden;"></h2>
             <div>
-                <p>Height:<div id="height" style="visibility: hidden;"></div></p>
-                <p>Weight:<div id="weight" style="visibility: hidden;"></div></p>
+                <p>City:<div id="city" style="visibility: hidden;"></div></p>
+                <p>Location:<div id="location" style="visibility: hidden;"></div></p>
             </div>
         </div>
         <h2 id="college" style="visibility: hidden;"></h2>
@@ -23,19 +23,15 @@
     <thread>
         <tr>
             <td><strong>Year</strong></td>
+            <td><strong>Points</strong></td>
             <td><strong>Yards</strong></td>
-            <td><strong>TDs</strong></td>
-            <td><strong>Int</strong></td>
-            <td><strong>Completions</strong></td>
         </tr>
     </thread>
     <tbody>
         <tr>
             <td>2023</td>
-            <td id="yards" style="visibility: hidden;"></td>
-            <td id="tDs" style="visibility: hidden;"></td>
-            <td id="inTs" style="visibility: hidden;"></td>
-            <td id="completions" style="visibility: hidden;"></td>
+            <td id="Points" style="visibility: hidden;"></td>
+            <td id="Yards" style="visibility: hidden;"></td>
         </tr>
     </tbody>
 </table>
@@ -45,23 +41,21 @@
     <thead>
         <tr>
             <td><strong>Year</strong></td>
-            <td><strong>Yards Per Attempt</strong></td>
-            <td><strong>Completion Percentage</strong></td>
-            <td><strong>TD/INT Ratio</strong></td>
+            <td><strong>Points Per Game</strong></td>
+            <td><strong>Yards Per Game</strong></td>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>2023</td>
-            <td id="yardsPerAttempt" style="visibility: hidden;"></td>
-            <td id="completionPercentage" style="visibility: hidden;"></td>
-            <td id="tdintRatio" style="visibility: hidden;"></td>
+            <td id="PointsPerGame" style="visibility: hidden;"></td>
+            <td id="YardsPerGame" style="visibility: hidden;"></td>
         </tr>
     </tbody>
 </table>
 
 <div>
-    <h2>Try Another Player?</h2>
+    <h2>Try Another Team?</h2>
     <a href="index">
         <strong><em>Back to Search</em></strong>
     </a>
