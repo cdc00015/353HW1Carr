@@ -1,0 +1,74 @@
+﻿@page
+@model _353HW1Carr.Pages.favoriteDetailsModel
+@{
+    var userid = HttpContext.Request.Query["userid"];
+}
+
+<div class="flexing">
+    <form id="userForm" class="form">
+        <div class="searchUser">
+            <select id="userDropdown" name="userid">
+                <option value=""> Select a user (1-10) </option>
+                <option value="1"> User 1 </option>
+                <option value="2"> User 2 </option>
+                <option value="3"> User 3 </option>
+                <option value="4"> User 4 </option>
+                <option value="5"> User 5 </option>
+                <option value="6"> User 6 </option>
+                <option value="7"> User 7 </option>
+                <option value="8"> User 8 </option>
+                <option value="9"> User 9 </option>
+                <option value="10"> User 10 </option>
+            </select>
+        <button type="button" onclick="fetchUserDetails()" class="submit-btn">Fetch User Favorites</button>
+        </div>
+    </form>
+</div>
+
+<div id="playerDetails" class="table-container">
+    <h2>Player Information</h2>
+    <table id="playerTable">
+        <thead>
+            <tr>
+                <th><strong>First Name</strong></th>
+                <th><strong>Last Name</strong></th>
+                <th><strong>Jersey Number</strong></th>
+                <th><strong>College</strong></th>
+            </tr>
+        </thead>
+        <tbody id="playerTableBody">
+            <tr>
+                <!-- hopefully player data will display here -->
+                @* <td id ="firstName" style="visibility: hidden;"></td>
+                <td id="lastName" style="visibility: hidden;"></td>
+                <td id="jerseyNum" style="visibility: hidden;"></td>
+                <td id="college" style="visibility: hidden;"></td> *@
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="teamDetails" class="table-container">
+    <h2>Team Information</h2>
+    <table id="teamTable">
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <th>City</th>
+                <th>Location</th>
+                <th>Division</th>
+            </tr>
+        </thead>
+        <tbody id="teamTableBody">
+            <tr>
+                <!-- hopefully team data will display here -->
+                @* <th id="teamName" style="visibility: hidden;"></th>
+                <th id="city" style="visibility: hidden;"></th>
+                <th id="location" style="visibility: hidden;"></th>
+                <th id="division" style="visibility: hidden;"></th> *@
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="site.js"></script>
+<script type="module">fetchUserDetails(@userid)</script>
