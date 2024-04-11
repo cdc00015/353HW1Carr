@@ -4,30 +4,23 @@
     var userid = HttpContext.Request.Query["userid"];
 }
 
-<div class="flexing">
-    <form id="userForm" class="form">
-        <div class="searchUser">
-            <select id="userDropdown" name="userid">
-                <option value=""> Select a user (1-10) </option>
-                <option value="1"> User 1 </option>
-                <option value="2"> User 2 </option>
-                <option value="3"> User 3 </option>
-                <option value="4"> User 4 </option>
-                <option value="5"> User 5 </option>
-                <option value="6"> User 6 </option>
-                <option value="7"> User 7 </option>
-                <option value="8"> User 8 </option>
-                <option value="9"> User 9 </option>
-                <option value="10"> User 10 </option>
-            </select>
-        <button type="button" onclick="fetchUserDetails()" class="submit-btn">Fetch User Favorites</button>
-        </div>
-    </form>
-</div>
-
-<div id="playerDetails" class="table-container">
+<form id="userForm" class="form">
+    <div class="searchUser">
+        <select id="userDropdown" name="userid">
+        @for(int i=1; i<=10; i++)
+        {
+            <option value="@i">User @i</option>
+        }
+        </select>   
+    <button type="button" class="button submit-btn" style="" onclick="fetchUserFavorites()">Show Favorites</button>
+    </div>
+</form>
+<br/>
+<hr/>
+<br/>
+<div id="playerDetails" class="table-container" style="">
     <h2>Player Information</h2>
-    <table id="playerTable">
+    <table id="playerTable" class="details-table">
         <thead>
             <tr>
                 <th><strong>First Name</strong></th>
@@ -37,38 +30,32 @@
             </tr>
         </thead>
         <tbody id="playerTableBody">
-            <tr>
-                <!-- hopefully player data will display here -->
-                @* <td id ="firstName" style="visibility: hidden;"></td>
-                <td id="lastName" style="visibility: hidden;"></td>
-                <td id="jerseyNum" style="visibility: hidden;"></td>
-                <td id="college" style="visibility: hidden;"></td> *@
-            </tr>
+        <!--player data enters here-->
         </tbody>
     </table>
 </div>
-
-<div id="teamDetails" class="table-container">
+<br/>
+<div id="teamDetails" class="table-container" style="">
     <h2>Team Information</h2>
-    <table id="teamTable">
+    <table id="teamTable" class="details-table">
         <thead>
             <tr>
-                <th>Team Name</th>
-                <th>City</th>
-                <th>Location</th>
-                <th>Division</th>
+                <th><strong>Team Name</strong></th>
+                <th><strong>City</strong></th>
+                <th><strong>Location</strong></th>
+                <th><strong>Division</strong></th>
             </tr>
         </thead>
         <tbody id="teamTableBody">
-            <tr>
-                <!-- hopefully team data will display here -->
-                @* <th id="teamName" style="visibility: hidden;"></th>
-                <th id="city" style="visibility: hidden;"></th>
-                <th id="location" style="visibility: hidden;"></th>
-                <th id="division" style="visibility: hidden;"></th> *@
-            </tr>
+        <!--team data enters here-->
         </tbody>
     </table>
+</div> 
+<br />
+<div>
+    <a href="index">
+        <strong><em>Back to Search</em></strong>
+    </a>
 </div>
-<script src="site.js"></script>
-<script type="module">fetchUserDetails(@userid)</script>
+
+<script src="~/js/site.js"></script>
