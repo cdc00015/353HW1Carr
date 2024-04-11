@@ -20,10 +20,10 @@
     <div id="jerseyNum" style="visibility: hidden;" class="PlayerNumber"></div>
 </div>
 
-<table>
+<table style="width:75%">
     <thread>
         <tr>
-            <td><strong>Year</strong></td>
+            <td style="width:min-content;"><strong>Temperature</strong></td>
             <td><strong>Yards</strong></td>
             <td><strong>TDs</strong></td>
             <td><strong>Int</strong></td>
@@ -32,23 +32,27 @@
     </thread>
     <tbody>
         <tr>
-            <td>2023</td>
+            <td>Total</td>
             <td id="yards" style="visibility: hidden;"></td>
             <td id="tDs" style="visibility: hidden;"></td>
             <td id="inTs" style="visibility: hidden;"></td>
             <td id="completions" style="visibility: hidden;"></td>
         </tr>
+        <tr>
+            <td>Under 32</td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
 
 <button type="button" onclick="var elem = document.getElementById('jlStats'); if (elem.style.display === 'block') {elem.style.display = 'none';} else {elem.style.display = 'block';}">More Stats!</button>
-<table id="jlStats" style="display: none; width: 100%;">
+<table id="jlStats" style="display: none; width: 75%;">
     <thead>
         <tr>
-            <td style="width:25%;"><strong>Year</strong></td>
-            <td style="width: 25%; "><strong>Yards Per Attempt</strong></td>
-            <td style="width: 25%; "><strong>Completion Percentage</strong></td>
-            <td style="width: 25%; "><strong>TD/INT Ratio</strong></td>
+            <td style="50%;"><strong>Year</strong></td>
+            <td style=;"><strong>Yards Per Attempt</strong></td>
+            <td style="45%;"><strong>Completion Percentage</strong></td>
+            <td style="45%;"><strong>TD/INT Ratio</strong></td>
         </tr>
     </thead>
     <tbody>
@@ -67,6 +71,8 @@
         <strong><em>Back to Search</em></strong>
     </a>
 </div>
+
+This is test html
 
 <script type="module">displayPlayerDetails(@playerid)</script>
 <script type="module">displayAdvancePlayerDetails(@playerid)</script>
