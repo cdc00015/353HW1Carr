@@ -73,7 +73,7 @@ async function fetchUserDetails(userid) {
     const playerResponse = await fetch(`https://localhost:7095/api/Favorites/player/${userid}`);
     const playerData = await playerResponse.json();
 
-    document.getElementById('firstName').innerHTML = playerData[0].firstName;
+        document.getElementById('firstName').innerHTML = playerData[0].firstName + " " + playerData[0].lastName;
     document.getElementById('firstName').style.visibility = 'visible';
 
     document.getElementById('lastName').innerHTML = playerData[0].lastName;
