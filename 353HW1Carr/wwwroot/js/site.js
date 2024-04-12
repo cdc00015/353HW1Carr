@@ -61,76 +61,58 @@ async function displayAdvancePlayerDetails(playerid) {
     document.getElementById('tdintRatio').style.visibility = 'visible'
 }
 
-async function fetchUserDetails(userid) {
-    const input = document.getElementById('userDropdown').value;
-
-    if (!input) {
+async function fetchUserFavorites() {
+    const userid = document.getElementById('userDropdown').value;
+    if (!userid) {
         alert('Please select a user.');
         return;
     }
 
-    try {
     const playerResponse = await fetch(`https://localhost:7095/api/Favorites/player/${userid}`);
     const playerData = await playerResponse.json();
-
-        document.getElementById('firstName').innerHTML = playerData[0].firstName + " " + playerData[0].lastName;
-    document.getElementById('firstName').style.visibility = 'visible';
-
-    document.getElementById('lastName').innerHTML = playerData[0].lastName;
-    document.getElementById('lastName').style.visibility = 'visible';
-
-    document.getElementById('jerseyNum').innerHTML = playerData[0].jerseyNum;
-    document.getElementById('jerseyNum').style.visibility = 'visible';
-
-    document.getElementById('college').innerHTML = playerData[0].college;
-    document.getElementById('college').style.visibility = 'visible';
-
-
-        //// Populate player table
-        //const playerTableBody = document.getElementById('playerTableBody');
-        //playerTableBody.innerHTML = '';
-        //playerData.forEach(player => {
-        //    const row = document.createElement('tr');
-        //    row.innerHTML = `
-        //        <td>${player.firstName}</td>
-        //        <td>${player.lastName}</td>
-        //        <td>${player.jerseyNum}</td>
-        //        <td>${player.college}</td>
-        //    `;
-        //    playerTableBody.appendChild(row);
-        //});
 
     const teamResponse = await fetch(`https://localhost:7095/api/Favorites/team/${userid}`);
     const teamData = await teamResponse.json();
 
-    document.getElementById('teamName').innerHTML = teamData[0].teamName;
-    document.getElementById('teamName').style.visibility = 'visible';
+    //fills tables with response from api
+    populatePlayerTable(playerData);
+    populateTeamTable(teamData);
 
-    document.getElementById('city').innerHTML = teamData[0].city;
-    document.getElementById('city').style.visibility = 'visible';
+    // shows tables after getting data
+    document.getElementById('playerDetails').style.display = 'block';
+    document.getElementById('teamDetails').style.display = 'block';
+}
 
-    document.getElementById('location').innerHTML = teamData[0].location;
-    document.getElementById('location').style.visibility = 'visible';
+async function populatePlayerTable(playerData) {
+    const playerTableBody = document.getElementById('playerTableBody');
+    playerTableBody.innerHTML = '';
 
-    document.getElementById('division').innerHTML = teamData[0].division;
-    document.getElementById('division').style.visibility = 'visible';
+    playerData.forEach(player => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+                <td>${player.firstName}</td>
+                <td>${player.lastName}</td>
+                <td>${player.jerseyNum}</td>
+                <td>${player.college}</td>
+            `;
+        //will auto increment table rows to fit response from api
+        playerTableBody.appendChild(row);
+    });
+}
 
+async function populateTeamTable(teamData) {
+    const teamTableBody = document.getElementById('teamTableBody');
+    teamTableBody.innerHTML = '';
 
-        //// Populate team table
-        //const teamTableBody = document.getElementById('teamTableBody');
-        //teamTableBody.innerHTML = '';
-        //teamData.forEach(team => {
-        //    const row = document.createElement('tr');
-        //    row.innerHTML = `
-        //        <td>${team.teamName}</td>
-        //        <td>${team.city}</td>
-        //        <td>${team.location}</td>
-        //        <td>${team.division}</td>
-        //    `;
-        //    teamTableBody.appendChild(row);
-        //});
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        alert('An error occurred while fetching data.');
-    }
+    teamData.forEach(team => {
+        const row = document.createElement('tr');
+        row.innerHTML =`
+                <td>${team.teamName}</td>
+                <td>${team.city}</td>
+                <td>${team.location}</td>
+                <td>${team.division}</td>
+        `;
+        //will auto increment table rows to fit response from api
+        teamTableBody.appendChild(row);
+    });
 }
