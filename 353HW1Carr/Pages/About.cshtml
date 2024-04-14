@@ -1,0 +1,107 @@
+﻿@page
+@model _353HW1Carr.Pages.AboutModel
+@{
+    ViewData["Title"] = "About";
+
+}
+
+<h1>Page Information and Functionality</h1>
+<hr/>
+<h3>Index Page</h3>
+<p>
+    Our first page is our home page (index.html). It's designed for high user interaction and serves as a hub for navigating to other pages. Users can search for players, select temperature preferences, and access favorite teams and players. We'll integrate weather API data to show stats based on different temperatures and precipitation. Additionally, links to specific players or teams (like player of the month) and terms and conditions will be provided.
+</p>
+
+<h3>Player Page</h3>
+<p>
+    Our player page, based on JL10.html, displays player stats retrieved using the PlayerGetBasicStats API. Users can view basic stats in a chart and reveal advanced stats with a button that utilizes the PlayerGetAdvanceStats API for complex calculations.
+</p>
+
+<h3>Team Page</h3>
+<p>
+    The team page allows users to view team stats fetched via the TeamGetBasicStats API. Users can click a button to reveal advanced stats, powered by the TeamGetAdvanceStats API, showcasing detailed calculations and information.
+</p>
+
+<h3>Favorite Page</h3>
+<p>
+    This page displays a user's favorite players and teams using the ShowPlayerFavorite and ShowTeamFavorite APIs. Users can manage their favorites list, leveraging the AddFavorite API (currently non-functional).
+</p>
+
+<h3>About Page</h3>
+<p>
+    The login page enables user authentication to track UserID for future functionalities, such as viewing favorite teams and players.
+</p>
+
+<h3>Login Page</h3>
+<p>
+    The login page has not yet been implemented, we planned on using Microsoft's Identity framwork to allow for users to register/login and then have a session id and userid generated based on their login, however this was much more in-depth than anticipated. This would allow for the favorites page to only show favorites based on who is logged in. This would enable user authentication to track UserID for future functionalities, such as viewing favorite teams and players.
+</p>
+
+<h3>Terms and Conditions Page</h3>
+<p>
+    Our terms and conditions page outlines website policies. It includes a link to return to the main page.
+</p>
+<br />
+
+<h1>API Information</h1>
+<hr/>
+
+<h3>PlayerGetBasicStats (Cris Carr)</h3>
+<p>
+    <strong>Purpose:</strong> Retrieve basic player information and display in a website table.
+    <br />
+    <strong>Inputs:</strong> Player's name (providing PlayerID to the API).
+    <br />
+    <strong>Outputs:</strong> Basic player information and stats from Player and Game tables.
+</p>
+
+<h3>PlayerGetAdvanceStats (Cris Carr)</h3>
+<p>
+    <strong>Purpose:</strong> Retrieve advanced player stats involving calculations.
+    <br />
+    <strong>Inputs:</strong> Player's name (providing PlayerID to the API).
+    <br />
+    <strong>Outputs:</strong> Advanced stat calculations using spPlayerGetAdvanceStats with Game and Player tables.
+</p>
+
+<h3>TeamGetBasicStats (Carson Mealey)</h3>
+<p>
+    <strong>Purpose:</strong> Retrieve basic stats for a specific team.
+    <br />
+    <strong>Inputs:</strong> Team name (providing TeamID to the API).
+    <br />
+    <strong>Outputs:</strong> Basic team information including location, division, and city.
+</p>
+
+<h3>TeamGetAdvanceStats (Carson Mealey)</h3>
+<p>
+    <strong>Purpose:</strong> Retrieve advanced team stats requiring calculations.
+    <br />
+    <strong>Inputs:</strong> Team name (providing TeamID to the API).
+    <br />
+    <strong>Outputs:</strong> Advanced stat calculations using spTeamGetAdvanceStats with Game and Team tables.
+</p>
+
+<h3>ShowFavoritePlayer (Jacob Williamson)</h3>
+<p>
+    <strong>Purpose:</strong> Retrieve a user's list of favorite players.
+    <br />
+    <strong>Inputs:</strong> User's UserID (providing PlayerID to the API).
+    <br />
+    <strong>Outputs:</strong> Display favorite players' name, jersey number, and college (if applicable) from PlayerFav table.
+</p>
+
+<h3>ShowFavoriteTeam (Jacob Williamson)</h3>
+<p>
+    <strong>Purpose:</strong> Retrieve a user's list of favorite teams.
+    <br />
+    <strong>Inputs:</strong> User's UserID (providing PlayerID to the API).
+    <br />
+    <strong>Outputs:</strong> Display favorite teams' name, city, location, and division from TeamFav table.
+</p>
+<br/>
+<div>
+    <a href="index">
+        <strong><em>Back to Search</em></strong>
+    </a>
+</div>
