@@ -61,6 +61,41 @@ async function displayAdvancePlayerDetails(playerid) {
     document.getElementById('tdintRatio').style.visibility = 'visible'
 }
 
+async function displayTeamDetails(teamid) {
+    const response = await fetch(`https://localhost:7095/api/Teams/Basic/${teamid}`)
+    const data = await response.json();
+
+    document.getElementById('teamName').innerHTML = data[0].teamName;
+    document.getElementById('teamName').style.visibility = 'visible';
+
+    document.getElementById('city').innerHTML = data[0].city;
+    document.getElementById('city').style.visibility = 'visible';
+
+    document.getElementById('location').innerHTML = data[0].location;
+    document.getElementById('location').style.visibility = 'visible'
+
+    document.getElementById('division').innerHTML = data[0].division;
+    document.getElementById('division').style.visibility = 'visible'
+
+    document.getElementById('points').innerHTML = data[0].points;
+    document.getElementById('points').style.visibility = 'visible'
+
+    document.getElementById('yards').innerHTML = data[0].yards;
+    document.getElementById('yards').style.visibility = 'visible'
+}
+
+async function displayAdvancedTeamDetails(teamid) {
+    const response = await fetch(`https://localhost:7095/api/Teams/Advanced/${teamid}`)
+    const data = await response.json();
+
+    document.getElementById('pointsPerGame').innerHTML = data[0].pointsPerGame;
+    document.getElementById('pointsPerGame').style.visibility = 'visible'
+
+    document.getElementById('yardsPerGame').innerHTML = data[0].yardsPerGame;
+    document.getElementById('yardsPerGame').style.visibility = 'visible'
+}
+
+
 async function fetchUserFavorites() {
     const userid = document.getElementById('userDropdown').value;
     if (!userid) {
