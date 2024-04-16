@@ -21,7 +21,7 @@ async function displayPlayerDetails(playerid) {
     const response = await fetch(`https://localhost:7095/api/Players/Basic/${playerid}`)
     const data = await response.json();
 
-    document.getElementById('playerName').innerHTML = data[0].firstName;
+    document.getElementById('playerName').innerHTML = data[0].firstName + " " + data[0].lastName;
     document.getElementById('playerName').style.visibility = 'visible';
 
     document.getElementById('college').innerHTML = data[0].college;
