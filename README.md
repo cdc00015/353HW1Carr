@@ -59,30 +59,30 @@ If you encounter any errors,
 ### PlayerGetBasicStats
 
 - **Description**: Retrieves basic information and stats of a player.
-- **Inputs**: Player's name.
-- **Outputs**: Basic player information and game statistics.
-- **Usage**: Call the API with a player's name to fetch the data.
+- **Inputs**: PlayerID
+- **Outputs**: Basic player information and player statistics.
+- **Usage**: Call the API with a PlayerID to fetch the data.
 
 ### PlayerGetAdvanceStats
 
 - **Description**: Retrieves advanced statistics for a player.
-- **Inputs**: Player's id.
+- **Inputs**: PlayerID
 - **Outputs**: Calculated advanced stats based on player's performance.
-- **Usage**: Invoke the API with a player's name to retrieve advanced stats.
+- **Usage**: Invoke the API with a PlayerID to retrieve advanced stats.
 
 ### TeamGetBasicStats
 
 - **Description**: Fetches basic statistics of a specific team.
-- **Inputs**: Team name.
+- **Inputs**: TeamID.
 - **Outputs**: Basic team information and performance stats.
-- **Usage**: Provide the team's name to the API for data retrieval.
+- **Usage**: Provide the TeamID to the API for data retrieval.
 
 ### TeamGetAdvancedStats
 
 - **Description**: Retrieves advanced statistics for a team.
-- **Inputs**: Team name.
-- **Outputs**: Detailed calculations and advanced metrics for the team.
-- **Usage**: Submit the team's name to the API to obtain advanced stats.
+- **Inputs**: TeamID.
+- **Outputs**: Calculated advanced stats based on the team's performance.
+- **Usage**: Submit the TeamID to the API to obtain advanced stats.
 
 ### ShowFavoritePlayer
 
