@@ -14,42 +14,73 @@
                 <p>Location:<div id="location" style="visibility: hidden;"></div></p>
             </div>
         </div>
-        <h2 id="college" style="visibility: hidden;"></h2>
+        <h2 id="city" style="visibility: hidden;"></h2>
     </div>
-    <div id="jerseyNum" style="visibility: hidden;" class="PlayerNumber"></div>
+    <div id="location" style="visibility: hidden;" class="Location"></div>
 </div>
 
-<table>
+<table style="width:75%">
     <thread>
         <tr>
-            <td><strong>Year</strong></td>
-            <td><strong>Points</strong></td>
+            <td style="width:min-content;"><strong>Temperature</strong></td>
             <td><strong>Yards</strong></td>
+            <td><strong>Points</strong></td>
+
         </tr>
     </thread>
     <tbody>
         <tr>
-            <td>2023</td>
-            <td id="Points" style="visibility: hidden;"></td>
-            <td id="Yards" style="visibility: hidden;"></td>
+            <td>Total</td>
+            <td id="yards" style="visibility: hidden;"></td>
+            <td id="points" style="visibility: hidden;"></td>
+        </tr>
+        <tr>
+            <td>Under 32</td>
+            <td>476</td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td>33-69</td>
+            <td>536</td>
+            <td>48</td>
+        </tr>
+        <tr>
+            <td>Over 70</td>
+            <td>869</td>
+            <td>62</td>
         </tr>
     </tbody>
 </table>
 
 <button type="button" onclick="var elem = document.getElementById('jlStats'); if (elem.style.display === 'block') {elem.style.display = 'none';} else {elem.style.display = 'block';}">More Stats!</button>
-<table id="jlStats" style="display: none; width: 100%;">
+<table id="jlStats" style="display: none; width: 75%;">
     <thead>
         <tr>
-            <td><strong>Year</strong></td>
-            <td><strong>Points Per Game</strong></td>
-            <td><strong>Yards Per Game</strong></td>
+            <td style="width: 35%;"><strong>Temperature</strong></td>
+            <td style="width: 27%;"><strong>Yards Per Game</strong></td>
+            <td style="width: 27%;"><strong>Points Per Game</strong></td>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>2023</td>
-            <td id="PointsPerGame" style="visibility: hidden;"></td>
-            <td id="YardsPerGame" style="visibility: hidden;"></td>
+            <td>Total</td>
+            <td>2043</td>
+            <td>122</td>
+        </tr>
+        <tr>
+            <td>Under 32</td>
+            <td>113.42</td>
+            <td>19.61</td>
+        </tr>
+        <tr>
+            <td>33-69</td>
+            <td>189.07</td>
+            <td>27.56</td>
+        </tr>
+        <tr>
+            <td>Over 70</td>
+            <td>212.39</td>
+            <td>32.55</td>
         </tr>
     </tbody>
 </table>
