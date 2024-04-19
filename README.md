@@ -133,10 +133,24 @@ If you encounter any errors,
 - Use version control (Git) for managing changes and collaboration.
 - Leverage Visual Studio debugging tools for troubleshooting.
 
+## ChatGPT Prompts
+Gave ChatGPT my code in my AdvanceStats class and told it I had a CS1519 error and asked what was wrong. It told me I had an extra '[Required]' at the end of my code.
+
+Gave ChatGPT my code for the PlayerService Repo and told it I had a CS0029 error and asked what was wrong. It told me I connected the Player class instead of AdvanceStats for my PlayerGetAdvanceStats API.
+
+Gave ChatGPT my code for the TeamsController and told it I was getting a fetch error response 500 and it told me to alter my "HTTP Get" code and that helped fix the issue.
+
+>Could you help me with making some mock data for the following sql server table? and I have users with userid's 1 through 10, and teams with teamid's 1 through 10...
+
+This quickly returned a useful SQL insert query that saved us from having to create mock data manually. 
+
+>Hey in my asp.net core web app, I have two sql server stored procedures turned to apis, however they're returning duplicated values... What could be causing this miscommunication between my sql server and my front end pages within this asp.net8.0 core web app?
+
+>Can you help me create a basic privacy policy page in cshtml for use within this NFL weather app asp.net core web application?
+
+>Hey based on everything we've discussed, can you help me write a basic deployment guide in markdown for use in my project's readme.md? 
 ---
-
-
-
+<br/><br/>
 # 353 HW#1
 ## Project Overview
 My goal for my project is to have a website where people can enter a player and the climate they wants the stats for that player and my website be able to give it to them. Right now my project is very early one. It has a search bar and drop down menu but they are not currently working.
