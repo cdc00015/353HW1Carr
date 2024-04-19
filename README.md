@@ -144,6 +144,8 @@ Gave ChatGPT my code for the TeamsController and told it I was getting a fetch e
 
 This quickly returned a useful SQL insert query that saved us from having to create mock data manually. 
 
+> I need help formatting a form that allows for users to select from a dropdown users one to ten, and on display button click have two tables populate with data returned from the two apis. currently I have a form that looks okay but doesnt function properly and I was hoping you could check my code for errors / mistakes
+
 >Hey in my asp.net core web app, I have two sql server stored procedures turned to apis, however they're returning duplicated values... What could be causing this miscommunication between my sql server and my front end pages within this asp.net8.0 core web app?
 
 >Can you help me create a basic privacy policy page in cshtml for use within this NFL weather app asp.net core web application?
